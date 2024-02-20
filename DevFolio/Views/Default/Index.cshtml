@@ -1,0 +1,218 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+@Html.Action("PartialHead","default")
+
+<body id="page-top">
+
+    <!--/ Nav Star /-->
+    @Html.Action("PartialNavBar", "Default")
+    <!--/ Nav End /-->
+    <!--/ Intro Skew Star /-->
+    @Html.Action("PartialFeature","Default")
+    <!--/ Intro Skew End /-->
+
+    <section id="about" class="about-mf sect-pt4 route">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="box-shadow-full">
+                        <div class="row">
+                            <div class="col-md-6">
+                                @Html.Action("PartialProfile","Default")                               
+                                @Html.Action("PartialSkill","Default")
+                            </div>
+                            <div class="col-md-6">
+                                @Html.Action("PartialAbout","Default")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--/ Section Services Star /-->
+    <section id="service" class="services-mf route">
+        <div class="container">
+           @Html.Action("PartialService","Default")
+        </div>
+    </section>
+    <!--/ Section Services End /-->
+
+    <div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg)">
+        <div class="overlay-mf"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-lg-3">
+                    <div class="counter-box">
+                        <div class="counter-ico">
+                            <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
+                        </div>
+                        <div class="counter-num">
+                            <p class="counter">4</p>
+                            <span class="counter-text">Tamamlanan Projeler</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-lg-3">
+                    <div class="counter-box pt-4 pt-md-0">
+                        <div class="counter-ico">
+                            <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
+                        </div>
+                        <div class="counter-num">
+                            <p class="counter">5</p>
+                            <span class="counter-text">Deneyim</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-lg-3">
+                    <div class="counter-box pt-4 pt-md-0">
+                        <div class="counter-ico">
+                            <span class="ico-circle"><i class="ion-ios-people"></i></span>
+                        </div>
+                        <div class="counter-num">
+                            <p class="counter">250</p>
+                            <span class="counter-text">Toplam Müşteri</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-lg-3">
+                    <div class="counter-box pt-4 pt-md-0">
+                        <div class="counter-ico">
+                            <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
+                        </div>
+                        <div class="counter-num">
+                            <p class="counter">7</p>
+                            <span class="counter-text">Sertifikalar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--/ Section Portfolio Star /-->
+   @Html.Action("PartialPortfolio", "Default") 
+    <!--/ Section Portfolio End /-->
+
+    <!--/ Section Testimonials Star /-->
+    @Html.Action("PartialTestimonial","Default")
+    <!--/ Section Testimonials End /-->
+
+
+    <!--/ Section Blog Star /-->
+    <!--/ Section Blog End /-->
+
+
+    <!--/ Section Contact-Footer Star /-->
+    <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
+        <div class="overlay-mf"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="contact-mf">
+                        <div id="contact" class="box-shadow-full">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="title-box-2">
+                                        <h5 class="title-left">
+                                            Mesaj Gönder
+                                        </h5>
+                                    </div>
+                                    <div>
+                                        <form action="" method="post" role="form" class="contactForm">
+                                            <div id="sendmessage">Mesajınız için teşekkürler.</div>
+                                            <div id="errormessage"></div>
+                                            <div class="row">
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="text" name="name" class="form-control" id="name" placeholder="Adınız" data-rule="minlen:4" data-msg="Lütfen en az 4 karakter girin" />
+                                                        <div class="validation"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Mail Adresiniz" data-rule="email" data-msg="Lütfen geçerli bir e-mail adresi girin" />
+                                                        <div class="validation"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Konu" data-rule="minlen:4" data-msg="Lütfen en az 8 karakter girin" />
+                                                        <div class="validation"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Lütfen bir şeyler yazın" placeholder="Mesajınız"></textarea>
+                                                        <div class="validation"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <button type="submit" class="button button-a button-big button-rouded">Mesajı Gönder</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.Action("PartialAddress", "Default")
+                                    @Html.Action("PartialSocial", "Default")
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="copyright-box">
+                            <p class="copyright">&copy; Copyright <strong>Mahsun Aydın</strong>. All Rights Reserved</p>
+                            <div class="credits">
+                                <!--
+                                  All the links in the footer should remain intact.
+                                  You can delete the links only if you purchased the pro version.
+                                  Licensing information: 
+                                  Purchase the pro version with working PHP/AJAX contact form: 
+                                -->
+                                Designed by <a href="#">Mahsun Aydın</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <!--/ Section Contact-footer End /-->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <div id="preloader"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="~/Templates/devfolio-master/lib/jquery/jquery.min.js"></script>
+    <script src="~/Templates/devfolio-master/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="~/Templates/devfolio-master/lib/popper/popper.min.js"></script>
+    <script src="~/Templates/devfolio-master/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Templates/devfolio-master/lib/easing/easing.min.js"></script>
+    <script src="~/Templates/devfolio-master/lib/counterup/jquery.waypoints.min.js"></script>
+    <script src="~/Templates/devfolio-master/lib/counterup/jquery.counterup.js"></script>
+    <script src="~/Templates/devfolio-master/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/Templates/devfolio-master/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="~/Templates/devfolio-master/lib/typed/typed.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="~/Templates/devfolio-master/contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="~/Templates/devfolio-master/js/main.js"></script>
+
+</body>
+</html>
+

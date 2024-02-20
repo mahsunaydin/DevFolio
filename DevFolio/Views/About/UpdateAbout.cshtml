@@ -1,0 +1,19 @@
+﻿@model DevFolio.Models.TblAbout
+
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Hakkımda Alanı Güncelleme</h1>
+
+<form method="post">
+    
+    @Html.TextBoxFor(x => x.AboutID, new { @class = "form-control" })
+    <br />
+    <label>Hakkımda Açıklaması</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+</form>
+
